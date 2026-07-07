@@ -38,9 +38,9 @@ export function Header() {
         scrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-3 md:px-12">
         <Link to="/" className="z-50 relative">
-          <img src="/logo/logo1.png" alt="logo" className="w-auto h-12 md:h-14" />
+          <img src="/logo/logo1.png" alt="logo" className="w-auto h-12" />
         </Link>
 
         {/* Desktop Nav */}

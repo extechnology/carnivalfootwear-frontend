@@ -65,7 +65,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Filters */}
-      <section className="sticky md:top-[95px] top-[80px] z-30 border-b border-border bg-background/95 backdrop-blur-md">
+      <section className="sticky md:top-[70px] top-[70px] z-30 border-b border-border bg-background/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-12 md:py-5">
           <div className="flex w-full flex-col gap-3 md:w-auto md:flex-row md:gap-6">
             <FancySelect

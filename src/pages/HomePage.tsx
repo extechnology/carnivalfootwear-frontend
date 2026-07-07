@@ -146,11 +146,11 @@ export default function Home() {
                     duration: 1.1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="mt-8 max-w-3xl text-5xl font-light leading-[0.88] tracking-tight text-white md:text-7xl xl:text-8xl"
+                  className="md:mt-8 mt-4 max-w-3xl text-3xl font-light leading-[0.88] tracking-tight text-white md:text-5xl xl:text-7xl"
                 >
                   Elegance Starts
                   <br />
-                  <span className="italic font-normal text-white/90">
+                  <span className=" font-normal text-white/90">
                     From The Ground Up.
                   </span>
                 </motion.h1>
@@ -162,7 +162,7 @@ export default function Home() {
                     delay: 0.3,
                     duration: 0.8,
                   }}
-                  className="mt-8 max-w-xl text-lg leading-8 text-white/75"
+                  className="md:mt-8 mt-4 max-w-xl text-xs md:text-lg md:leading-8 text-white/75"
                 >
                   Stylish, comfortable and crafted for every occasion. Discover
                   ladies' footwear designed to add elegance and confidence to
@@ -175,11 +175,11 @@ export default function Home() {
                   transition={{
                     delay: 0.6,
                   }}
-                  className="mt-12 flex flex-wrap gap-4"
+                  className="md:mt-12 mt-6 flex flex-wrap gap-4"
                 >
                   <Link
                     to="/products"
-                    className="group rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition-all duration-300 hover:scale-105"
+                    className="group rounded-full bg-white px-4 py-2 text-xs md:px-8 md:py-4 md:text-sm font-medium text-black transition-all duration-300 hover:scale-105"
                   >
                     <span className="flex items-center gap-3">
                       Explore Collection
