@@ -18,8 +18,6 @@ export default function DetailPage() {
 
   const defaultColor = product?.colors?.[0];
 
-  console.log("Product Details: ", product);
-
   const [selectedColor, setSelectedColor] = useState(defaultColor?.name || "");
 
   const activeColor =
@@ -38,9 +36,6 @@ export default function DetailPage() {
     setSelectedImage(activeColor?.images?.[0]?.image || "");
   }, [activeColor]);
 
-  useEffect(() => {
-    setSize(null);
-  }, [activeColor]);
 
   // const mainImage = product.colors?.[0]?.images?.[0]?.image || "";
   // const allImages =
@@ -170,27 +165,33 @@ Could you please provide more details?`;
                 </span>
               </div>
               <div className="md:mt-5 mt-4 flex flex-wrap gap-4">
-                {product.colors?.map((c: { id: number; name: string; color_code: string; images: { image: string }[] }) => {
-                  const active = activeColor?.name === c.name;
-                  const bg = c.color_code || "#CCCCCC";
-                  return (
-                    <button
-                      key={c.id}
-                      title={c.name}
-                      onClick={() => {
-                        setSelectedColor(c.name);
-                        setSelectedImage(c.images?.[0]?.image || "");
-                        setSize(null);
-                      }}
-                      style={{ backgroundColor: bg }}
-                      className={`h-10 w-10 rounded-full border transition-all ${
-                        active
-                          ? "ring-2 ring-ink ring-offset-2 border-transparent"
-                          : "border-border hover:ring-1 hover:ring-ink"
-                      }`}
-                    />
-                  );
-                })}
+                {product.colors?.map(
+                  (c: {
+                    id: number;
+                    name: string;
+                    color_code: string;
+                    images: { image: string }[];
+                  }) => {
+                    const active = activeColor?.name === c.name;
+                    const bg = c.color_code || "#CCCCCC";
+                    return (
+                      <button
+                        key={c.id}
+                        title={c.name}
+                        onClick={() => {
+                          setSelectedColor(c.name);
+                          setSize(null);
+                        }}
+                        style={{ backgroundColor: bg }}
+                        className={`h-10 w-10 rounded-full border transition-all ${
+                          active
+                            ? "ring-2 ring-ink ring-offset-2 border-transparent"
+                            : "border-border hover:ring-1 hover:ring-ink"
+                        }`}
+                      />
+                    );
+                  },
+                )}
               </div>
             </div>
           </Reveal>
@@ -235,27 +236,34 @@ Could you please provide more details?`;
                 </span>
               </div>
               <div className="mt-5 flex flex-wrap gap-4">
-                {product.colors?.map((c: { id: number; name: string; color_code: string; images: { image: string }[] }) => {
-                  const active = activeColor?.name === c.name;
-                  const bg = c.color_code || "#CCCCCC";
-                  return (
-                    <button
-                      key={c.id}
-                      title={c.name}
-                      onClick={() => {
-                        setSelectedColor(c.name);
-                        setSelectedImage(c.images?.[0]?.image || "");
-                        setSize(null);
-                      }}
-                      style={{ backgroundColor: bg }}
-                      className={`h-10 w-10 rounded-full border transition-all ${
-                        active
-                          ? "ring-2 ring-ink ring-offset-2 border-transparent"
-                          : "border-border hover:ring-1 hover:ring-ink"
-                      }`}
-                    />
-                  );
-                })}
+                {product.colors?.map(
+                  (c: {
+                    id: number;
+                    name: string;
+                    color_code: string;
+                    images: { image: string }[];
+                  }) => {
+                    const active = activeColor?.name === c.name;
+                    const bg = c.color_code || "#CCCCCC";
+                    return (
+                      <button
+                        key={c.id}
+                        title={c.name}
+                        onClick={() => {
+                          setSelectedColor(c.name);
+                          setSelectedImage(c.images?.[0]?.image || "");
+                          setSize(null);
+                        }}
+                        style={{ backgroundColor: bg }}
+                        className={`h-10 w-10 rounded-full border transition-all ${
+                          active
+                            ? "ring-2 ring-ink ring-offset-2 border-transparent"
+                            : "border-border hover:ring-1 hover:ring-ink"
+                        }`}
+                      />
+                    );
+                  },
+                )}
               </div>
             </div>
           </Reveal>
@@ -302,9 +310,14 @@ Could you please provide more details?`;
           </div>
         </Reveal>
         <div className="grid grid-cols-2 md:gap-10 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16">
-          {related.map((p: import("../features/product/types/types.product").Product, i: number) => (
-            <ProductCard key={p.id} product={p} index={i} />
-          ))}
+          {related.map(
+            (
+              p: import("../features/product/types/types.product").Product,
+              i: number,
+            ) => (
+              <ProductCard key={p.id} product={p} index={i} />
+            ),
+          )}
         </div>
       </section>
       {/* Size guide modal */}

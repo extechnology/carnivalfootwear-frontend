@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - master
-      - "unwire/**"
   pull_request:
     branches:
       - master
-      - "unwire/**"
 
 jobs:
   build:

@@ -52,11 +52,11 @@ export default function Home() {
   }, [active, paused, go, total]);
 
   // Reset active index if heroImage reloads with fewer slides
-  useEffect(() => {
-    if (total > 0 && active >= total) {
-      setActive(0);
-    }
-  }, [total, active]);
+  // useEffect(() => {
+  //   if (total > 0 && active >= total) {
+  //     setActive(0);
+  //   }
+  // }, [total, active]);
 
   const featured = apiProducts
     ? apiProducts.filter((p) => p.is_featured).slice(0, 9)
