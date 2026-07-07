@@ -1,11 +1,21 @@
-import { useQuery } from "@tanstack/react-query";
+
+
+
+import { useEffect, useState } from "react";
+import type { ProductType } from "../../product/types/types.product";
 import getTypes from "../api/getTypes";
 
-const useTypes = () => {
-  return useQuery({
-    queryKey: ["types"],
-    queryFn: getTypes,
-  });
-};
+export function useTypes() {
+  const [type, setTypes] = useState<ProductType[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-export default useTypes;
+  useEffect(() => {
+    getTypes()
+      .then(setTypes)
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  return { type, loading, error };
+}

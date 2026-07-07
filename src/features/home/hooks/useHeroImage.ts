@@ -1,9 +1,18 @@
-import { useQuery } from "@tanstack/react-query";
-import getHeroImage from "../api/getHeroImages";
+import { useEffect, useState } from "react";
+import type { HeroImage } from "../section.types";
+import getHeroImages from "../api/getHeroImages";
 
-export const useHeroImage = () => {
-  return useQuery({
-    queryKey: ["hero-image"],
-    queryFn: getHeroImage,
-  });
-};
+export function useHeroImage() {
+  const [heroImage, setHeroImages] = useState<HeroImage[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    getHeroImages()
+      .then(setHeroImages)
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  return { heroImage, loading, error };
+}

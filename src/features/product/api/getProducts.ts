@@ -1,12 +1,16 @@
-import axiosInstance from "../../../api/axiosInstance";
 import type { Product } from "../types/types.product";
+import { products } from "../../../lib/products";
 
 export const getProducts = async (): Promise<Product[]> => {
-  const { data } = await axiosInstance.get<Product[]>("/products/");
-  return data;
+  return products;
 };
 
 export const getProduct = async (id: number): Promise<Product> => {
-  const { data } = await axiosInstance.get<Product>(`/products/${id}/`);
-  return data;
+  const product = products.find((p) => p.id === id);
+
+  if (!product) {
+    throw new Error("Product not found");
+  }
+
+  return product;
 };

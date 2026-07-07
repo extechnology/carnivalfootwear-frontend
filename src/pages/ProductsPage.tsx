@@ -9,8 +9,8 @@ import { Breadcrumbs } from "../components/site/Breadcrumbs";
 import { Reveal } from "../components/site/Reveal";
 import { ProductCard } from "../components/site/ProductCard";
 
-import useCategories from "../features/category/hooks/useCategories";
-import useTypes from "../features/product_types/hooks/useTypes";
+import { useCategories } from "../features/category/hooks/useCategories";
+import { useTypes } from "../features/product_types/hooks/useTypes";
 
 const SORTS = ["Featured", "Price · low", "Price · high"] as const;
 type Sort = (typeof SORTS)[number];
@@ -19,10 +19,10 @@ export default function ProductsPage() {
   const [cat, setCat] = useState<string>("All");
   const [type, setType] = useState<string>("All");
   const [sort, setSort] = useState<Sort>("Featured");
-  const { data: apiProducts, isLoading } = useProducts();
+  const { products: apiProducts, loading: isLoading } = useProducts();
 
-  const { data: categories } = useCategories();
-  const { data: types } = useTypes();
+  const { category: categories } = useCategories();
+  const { type: types } = useTypes();
 
   const CATEGORIES = categories?.map((category) => category.name) || [];
   const TYPES = types?.map((type) => type.name) || [];

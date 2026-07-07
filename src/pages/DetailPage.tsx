@@ -10,8 +10,8 @@ import { ProductCard } from "../components/site/ProductCard";
 
 export default function DetailPage() {
   const { id } = useParams<{ id: string }>();
-  const { data: product, isLoading } = useProduct(Number(id));
-  const { data: allProducts } = useProducts();
+  const { product, loading: isLoading } = useProduct(Number(id));
+  const { products: allProducts } = useProducts();
 
   const [size, setSize] = useState<string | null>(null);
   const [showSizeGuide, setShowSizeGuide] = useState(false);
@@ -170,7 +170,7 @@ Could you please provide more details?`;
                 </span>
               </div>
               <div className="md:mt-5 mt-4 flex flex-wrap gap-4">
-                {product.colors?.map((c) => {
+                {product.colors?.map((c: { id: number; name: string; color_code: string; images: { image: string }[] }) => {
                   const active = activeColor?.name === c.name;
                   const bg = c.color_code || "#CCCCCC";
                   return (
@@ -207,7 +207,7 @@ Could you please provide more details?`;
                 </button>
               </div>
               <div className="mt-5 grid grid-cols-4 gap-2 sm:grid-cols-7">
-                {availableSizes.map((s) => {
+                {availableSizes.map((s: { id: number; name: string }) => {
                   const active = size === s.name;
                   return (
                     <button
@@ -235,7 +235,7 @@ Could you please provide more details?`;
                 </span>
               </div>
               <div className="mt-5 flex flex-wrap gap-4">
-                {product.colors?.map((c) => {
+                {product.colors?.map((c: { id: number; name: string; color_code: string; images: { image: string }[] }) => {
                   const active = activeColor?.name === c.name;
                   const bg = c.color_code || "#CCCCCC";
                   return (
@@ -302,7 +302,7 @@ Could you please provide more details?`;
           </div>
         </Reveal>
         <div className="grid grid-cols-2 md:gap-10 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-16">
-          {related.map((p, i) => (
+          {related.map((p: import("../features/product/types/types.product").Product, i: number) => (
             <ProductCard key={p.id} product={p} index={i} />
           ))}
         </div>

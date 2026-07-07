@@ -1,11 +1,20 @@
-import { useQuery } from "@tanstack/react-query";
+
+
+import { useEffect, useState } from "react";
+import type { Category } from "../types/category.types";
 import getCategories from "../api/getCategories";
 
-const useCategories = () => {
-  return useQuery({
-    queryKey: ["categories"],
-    queryFn: getCategories,
-  });
-};
+export function useCategories() {
+  const [category, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-export default useCategories;
+  useEffect(() => {
+    getCategories()
+      .then(setCategories)
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  return { category, loading, error };
+}

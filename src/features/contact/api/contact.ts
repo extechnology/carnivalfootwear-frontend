@@ -1,7 +1,6 @@
-import axiosInstance from "../../../api/axiosInstance";
 import type { Contact } from "../types/contact.types";
 
-export async function contact(data:Contact){
-    const response = await axiosInstance.post("/contact/", data);
-    return response.data;
+// Backend removed — stub function for local-only usage
+export async function contact(data: Contact): Promise<void> {
+  console.log("Contact form submitted (no backend):", data);
 }

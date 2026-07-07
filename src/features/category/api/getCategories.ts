@@ -1,10 +1,8 @@
-import axiosInstance from "../../../api/axiosInstance";
 import type { Category } from "../types/category.types";
+import { categories } from "../../../lib/category";
 
-
-const getCategories=async():Promise<Category[]>=>{
-    const response=await axiosInstance.get<Category[]>("/categories/");
-    return response.data;
-}
+const getCategories = async (): Promise<Category[]> => {
+  return categories;
+};
 
 export default getCategories;

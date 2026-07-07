@@ -1,9 +1,8 @@
-import axiosInstance from "../../../api/axiosInstance";
-import type { HeroImage } from "../section.types";
+import type { HeroImage } from "../../../lib/hero-image";
+import { heroImage } from "../../../lib/hero-image";
 
-const getHeroImage = async () => {
-  const response = await axiosInstance.get<HeroImage[]>("/hero-images/");
-  return response.data;
+const getHeroImages = async (): Promise<HeroImage[]> => {
+  return heroImage;
 };
 
-export default getHeroImage;
+export default getHeroImages;

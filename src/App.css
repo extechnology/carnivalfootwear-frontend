@@ -8,6 +8,10 @@
    Cyber Lady — premium minimal e-commerce design system
    Ivory canvas, ink type, warm clay accent, editorial serif.
    ========================================================= */
+::-webkit-scrollbar{
+  display: none;
+}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

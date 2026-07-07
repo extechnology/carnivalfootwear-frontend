@@ -4,7 +4,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 
 import { useHeroImage } from "../features/home/hooks/useHeroImage";
 import { useProducts } from "../features/product/hooks/useProducts";
-import useSectionImage from "../features/home/hooks/useSectionImage";
+import { useSectionImage } from "../features/home/hooks/useSectionImage";
 
 import { Reveal } from "../components/site/Reveal";
 import { Breadcrumbs } from "../components/site/Breadcrumbs";
@@ -19,17 +19,19 @@ export default function Home() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 140]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-  const { data: heroImage } = useHeroImage();
-  const { data: sectionImage } = useSectionImage();
+  const { heroImage } = useHeroImage();
+  const { sectionImage } = useSectionImage();
+
+  console.log(heroImage,"heroimage")
 
   // FIX: Derive safely — never undefined at render time
   const sectionImg = sectionImage?.[0]?.image ?? null;
   const total = heroImage?.length ?? 0;
-  const { data: apiProducts } = useProducts();
+  const { products: apiProducts } = useProducts();
 
   // Carousel state
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const [paused] = useState(false);
   const [dir, setDir] = useState(1);
 
   // FIX: Guard go() so modulo is never called on 0 or undefined
@@ -57,7 +59,7 @@ export default function Home() {
   }, [total, active]);
 
   const featured = apiProducts
-    ? apiProducts.filter((p) => p.is_featured)
+    ? apiProducts.filter((p) => p.is_featured).slice(0, 9)
     : [];
 
   // FIX: reference apiProducts (was missing from original — keep your existing hook)
@@ -65,205 +67,186 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section ref={heroRef} className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 md:gap-10 gap-5 px-1 pb-20 md:grid-cols-12 md:px-12 md:pt-5">
-          <motion.div
-            style={{ y, opacity }}
-            className="md:col-span-6 content-center order-2 md:order-1 px-4"
-          >
-            <Breadcrumbs
-              items={[
-                { label: "Cyber Lady", to: "/" },
-                { label: "Elegant Collection" },
-              ]}
-            />
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-              className="display md:mt-8 mt-4 text-3xl leading-[0.95] tracking-[-0.04em] md:text-5xl"
-            >
-              Elegance Starts from the Ground Up,
-              <br />
-              <span className="italic text-accent">Wear It Beautifully. </span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="md:mt-8 mt-4 max-w-md text-base leading-relaxed text-muted-foreground"
-            >
-              Stylish, comfortable, and crafted for every occasion, our ladies'
-              footwear collection adds elegance and confidence to every step.
-            </motion.p>
+      <section
+        ref={heroRef}
+        className="relative h-screen overflow-hidden bg-black"
+      >
+        {total > 0 && heroImage ? (
+          <>
+            {/* Slides */}
+            <AnimatePresence mode="wait" initial={false} custom={dir}>
+              <motion.div
+                key={active}
+                custom={dir}
+                className="absolute inset-0"
+                variants={{
+                  enter: (d: number) => ({
+                    opacity: 0,
+                    scale: 1.08,
+                    x: d > 0 ? 80 : -80,
+                  }),
+                  center: {
+                    opacity: 1,
+                    scale: 1,
+                    x: 0,
+                  },
+                  exit: (d: number) => ({
+                    opacity: 0,
+                    scale: 1.08,
+                    x: d > 0 ? -80 : 80,
+                  }),
+                }}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  duration: 1.3,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <motion.img
+                  src={heroImage[active].image}
+                  alt={heroImage[active].alt_text ?? ""}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  animate={{
+                    scale: [1, 1.08],
+                  }}
+                  transition={{
+                    duration: 12,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "linear",
+                  }}
+                />
+              </motion.div>
+            </AnimatePresence>
 
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
+
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
+
+            {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="md:mt-8 mt-4 flex items-center gap-6"
+              style={{ y, opacity }}
+              className="relative z-20 flex h-full items-center"
             >
-              <Link
-                to="/products"
-                className="group inline-flex items-center gap-3 bg-ink px-7 py-4 text-[11px] uppercase tracking-[0.25em] text-cream transition-colors hover:bg-accent"
-              >
-                Explore the collection
-                <span className="transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
-            </motion.div>
-          </motion.div>
+              <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
+                <Breadcrumbs
+                  items={[
+                    { label: "Carnival Footwear", to: "/" },
+                    { label: "Elegant Collection" },
+                  ]}
+                />
 
-          {/* ── HERO CAROUSEL ── */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="md:col-span-6 order-1 md:order-2"
-          >
-            {/* FIX: Render carousel only when images are available */}
-            {total > 0 && heroImage ? (
-              <div
-                className="group relative h-screen md:h-auto md:aspect-[1.1] overflow-hidden rounded-md bg-stone-950 ring-1 ring-white/10"
-                onMouseEnter={() => setPaused(true)}
-                onMouseLeave={() => setPaused(false)}
-              >
-                {/* Slides */}
-                <AnimatePresence mode="wait" initial={false} custom={dir}>
-                  <motion.div
-                    key={active}
-                    custom={dir}
-                    className="absolute inset-0 overflow-hidden"
-                    variants={{
-                      enter: (d: number) => ({
-                        x: d > 0 ? 120 : -120,
-                        opacity: 0,
-                        scale: 1.15,
-                        rotate: d > 0 ? 2 : -2,
-                        filter: "brightness(0.75)",
-                      }),
-                      center: {
-                        x: 0,
-                        opacity: 1,
-                        scale: 1,
-                        rotate: 0,
-                        filter: "brightness(1)",
-                      },
-                      exit: (d: number) => ({
-                        x: d > 0 ? -120 : 120,
-                        opacity: 0,
-                        scale: 0.92,
-                        rotate: d > 0 ? -2 : 2,
-                        filter: "brightness(0.75)",
-                      }),
-                    }}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    <motion.img
-                      // FIX: Safe access — guarded by `total > 0 && heroImage` above
-                      src={heroImage[active].image}
-                      alt={heroImage[active].alt_text ?? `Slide ${active + 1}`}
-                      width={1600}
-                      height={1600}
-                      className="absolute inset-0 h-full w-full object-cover will-change-transform"
-                      animate={{ scale: [1.08, 1.16], x: [0, -12], y: [0, -8] }}
-                      transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: "linear",
-                      }}
-                    />
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Progress bar */}
-                <div className="absolute top-0 left-0 right-0 flex gap-1 p-3">
-                  {heroImage.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => go(i, i > active ? 1 : -1)}
-                      className="h-0.5 flex-1 overflow-hidden bg-cream/30"
-                      aria-label={`Go to slide ${i + 1}`}
-                    >
-                      {i === active && (
-                        <motion.span
-                          className="block h-full bg-cream"
-                          initial={{ scaleX: 0 }}
-                          animate={{ scaleX: paused ? undefined : 1 }}
-                          transition={{ duration: 4, ease: "linear" }}
-                          style={{ transformOrigin: "left" }}
-                        />
-                      )}
-                      {i < active && <span className="block h-full bg-cream" />}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Bottom info bar */}
-                <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between px-6 pb-6">
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => go(active - 1, -1)}
-                      className="flex h-10 w-10 items-center justify-center border border-cream/30 text-cream backdrop-blur-sm transition-colors hover:border-cream hover:bg-cream/10"
-                      aria-label="Previous slide"
-                    >
-                      ←
-                    </button>
-                    <button
-                      onClick={() => go(active + 1, 1)}
-                      className="flex h-10 w-10 items-center justify-center border border-cream/30 text-cream backdrop-blur-sm transition-colors hover:border-cream hover:bg-cream/10"
-                      aria-label="Next slide"
-                    >
-                      →
-                    </button>
-                  </div>
-                </div>
-
-                {/* Slide counter badge */}
-                <div className="absolute top-5 right-5 flex h-10 w-10 items-center justify-center border border-cream/30 bg-ink/40 text-[11px] tabular-nums tracking-widest text-cream backdrop-blur-sm">
-                  {String(active + 1).padStart(2, "0")}
-                </div>
-              </div>
-            ) : (
-              // FIX: Skeleton placeholder while images load
-              <div className="aspect-[1.1] animate-pulse rounded-md bg-stone-800 ring-1 ring-white/10" />
-            )}
-          </motion.div>
-        </div>
-
-        {/* Marquee */}
-        <div className="overflow-hidden border-y border-border bg-cream py-6">
-          <div className="marquee-track flex w-max gap-16 whitespace-nowrap text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-            {Array.from({ length: 2 }).map((_, k) => (
-              <div key={k} className="flex gap-16">
-                {[
-                  "Stylish",
-                  "Comfortable",
-                  "Durable",
-                  "Lightweight",
-                  "Trendy",
-                  "Elegant",
-                  "Flexible",
-                  "Cushioned",
-                  "Breathable",
-                  "Premium",
-                ].map((t) => (
-                  <span key={t} className="flex items-center gap-16">
-                    {t}
-                    <span aria-hidden className="text-accent">
-                      ✦
-                    </span>
+                <motion.h1
+                  initial={{ opacity: 0, y: 60 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 1.1,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="mt-8 max-w-3xl text-5xl font-light leading-[0.88] tracking-tight text-white md:text-7xl xl:text-8xl"
+                >
+                  Elegance Starts
+                  <br />
+                  <span className="italic font-normal text-white/90">
+                    From The Ground Up.
                   </span>
-                ))}
+                </motion.h1>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay: 0.3,
+                    duration: 0.8,
+                  }}
+                  className="mt-8 max-w-xl text-lg leading-8 text-white/75"
+                >
+                  Stylish, comfortable and crafted for every occasion. Discover
+                  ladies' footwear designed to add elegance and confidence to
+                  every step.
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    delay: 0.6,
+                  }}
+                  className="mt-12 flex flex-wrap gap-4"
+                >
+                  <Link
+                    to="/products"
+                    className="group rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition-all duration-300 hover:scale-105"
+                  >
+                    <span className="flex items-center gap-3">
+                      Explore Collection
+                      <span className="transition-transform group-hover:translate-x-1">
+                        →
+                      </span>
+                    </span>
+                  </Link>
+                </motion.div>
               </div>
-            ))}
-          </div>
-        </div>
+            </motion.div>
+
+            {/* Vertical Progress */}
+            <div className="absolute right-10 top-1/2 z-30 hidden -translate-y-1/2 md:flex flex-col gap-4">
+              {heroImage.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => go(i, i > active ? 1 : -1)}
+                  className={`transition-all duration-300 ${
+                    i === active
+                      ? "h-16 w-[3px] bg-white"
+                      : "h-8 w-[2px] bg-white/30 hover:bg-white/60"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Counter */}
+            {/* <div className="absolute bottom-10 right-10 z-30">
+              <div className="text-5xl font-light text-white">
+                {String(active + 1).padStart(2, "0")}
+
+                <span className="ml-2 text-lg text-white/40">
+                  / {heroImage.length}
+                </span>
+              </div>
+            </div> */}
+
+            {/* Arrows */}
+            {/* <div className="absolute bottom-10 left-10 z-30 flex gap-3">
+              <button
+                onClick={() => go(active - 1, -1)}
+                className="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-xl transition-all hover:bg-white hover:text-black"
+              >
+                ←
+              </button>
+
+              <button
+                onClick={() => go(active + 1, 1)}
+                className="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-xl transition-all hover:bg-white hover:text-black"
+              >
+                →
+              </button>
+            </div> */}
+
+            {/* Scroll */}
+            <div className="absolute bottom-10 left-1/2 z-30 hidden -translate-x-1/2 md:flex flex-col items-center gap-3">
+              <span className="text-xs uppercase tracking-[0.35em] text-white/60">
+                Scroll
+              </span>
+
+              <div className="h-12 w-px bg-white/40" />
+            </div>
+          </>
+        ) : (
+          <div className="h-screen animate-pulse bg-neutral-900" />
+        )}
       </section>
 
       {/* FEATURED */}

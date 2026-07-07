@@ -1,9 +1,8 @@
-import axiosInstance from "../../../api/axiosInstance";
 import type { Section } from "../section.types";
+import { sectionImage } from "../../../lib/section-image";
 
-const getSectionImage = async () => {
-  const response = await axiosInstance.get<Section[]>("/section-images/");
-  return response.data;
+const getSectionImage = async (): Promise<Section[]> => {
+  return sectionImage;
 };
 
 export default getSectionImage;
