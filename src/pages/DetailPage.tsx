@@ -33,9 +33,8 @@ export default function DetailPage() {
   useEffect(() => {
     if (!activeColor) return;
 
-    setSelectedImage(activeColor?.images?.[0]?.image || "");
+    // setSelectedImage(activeColor?.images?.[0]?.image || "");
   }, [activeColor]);
-
 
   // const mainImage = product.colors?.[0]?.images?.[0]?.image || "";
   // const allImages =
@@ -180,6 +179,7 @@ Could you please provide more details?`;
                         title={c.name}
                         onClick={() => {
                           setSelectedColor(c.name);
+                          setSelectedImage(c.images?.[0]?.image || "");
                           setSize(null);
                         }}
                         style={{ backgroundColor: bg }}
