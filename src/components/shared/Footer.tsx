@@ -45,20 +45,20 @@ export function Footer() {
               <li className="flex items-start gap-3 text-muted-foreground">
                 <FaLocationDot className="mt-1 shrink-0 text-ink" />
                 <span className="leading-relaxed">
-                  Cyber Lady Foryex Footcare Co.
+                  Unique Footcare
                   <br />
-                  West Mangad P.O.
+                  20/341,Perumukham
                   <br />
-                  Kunnamkulam
+                  Vadakke Bazar, Ramanattukara
                   <br />
-                  Thrissur, Kerala – India
+                  Kozhikode, Kerala – 673631
                 </span>
               </li>
 
               <li className="flex items-center gap-3">
                 <FaPhone className="text-ink" />
                 <a href="tel:+919447995173" className="link-underline">
-                  +91 94479 95173
+                  +91 9847418554
                 </a>
               </li>
 
@@ -70,7 +70,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  +91 94479 95173
+                  +91 9847418554
                 </a>
               </li>
 
@@ -80,23 +80,23 @@ export function Footer() {
                   href="mailto:foriyexfootcare@gmail.com"
                   className="link-underline"
                 >
-                  foriyexfootcare@gmail.com
+                  uniquefootcarefrk@gmail.com
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <p className="text-center pt-3 md:pt-0 text-xs text-muted-foreground">
             Our Parent Company Legal Name is FORIYEX FOOT CARE CO. & Tax
             Registration No. is 32AACFF1883C1ZX
           </p>
-        </div>
+        </div> */}
 
         <div className="rule mt-4 md:mt-8" />
         <div className="mt-6 flex flex-col items-start justify-between gap-2 text-xs text-muted-foreground md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Cyber Lady</p>
+          <p>© {new Date().getFullYear()} Carnival Footwear</p>
           <p>
             Developed by{" "}
             <Link to="https://www.extechnology.in/">extechnology.in</Link>
