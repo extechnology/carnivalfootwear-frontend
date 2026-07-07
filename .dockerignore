@@ -1,0 +1,15 @@
+node_modules/
+.env
+
+# Ignore source control history
+.git
+.gitignore
+
+# Ignore build artifacts and log outputs
+dist/
+build/
+*.log
+
+# Ignore IDE specific files
+.vscode/
+.idea/
