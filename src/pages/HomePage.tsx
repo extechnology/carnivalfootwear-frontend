@@ -122,7 +122,7 @@ export default function Home() {
             </AnimatePresence>
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
+            {/* <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" /> */}
 
             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
 
@@ -278,18 +278,16 @@ export default function Home() {
 
       {/* EDITORIAL SPLIT */}
       <section className="bg-cream">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 px-6 py-10 md:grid-cols-12 md:gap-20 md:px-12 md:py-40">
-          <Reveal className="md:col-span-7">
-            <div className="overflow-hidden bg-stone">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 px-6 py-10 md:grid-cols-12 md:gap-0 md:px-12 md:py-40">
+          <div className="md:col-span-7">
+            <div className="overflow-hidden ">
               {/* FIX: Render single image (first), not a mapped list */}
               {sectionImg && (
                 <motion.img
                   src={sectionImg}
                   alt="Woman walking in Cyber Lady nude strap sandals on marble"
                   loading="lazy"
-                  width={1280}
-                  height={1500}
-                  className="h-full w-full object-contain"
+                  className="w-160 aspect-square object-cover"
                   initial={{ scale: 1.1 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -297,9 +295,9 @@ export default function Home() {
                 />
               )}
             </div>
-          </Reveal>
+          </div>
 
-          <div className="md:col-span-5 md:pt-2">
+          <div className="md:col-span-5 md:pt-2 content-center">
             <Reveal>
               <p className="eyebrow">Confidence</p>
               <h2 className="display mt-3 text-3xl leading-[1.05] md:text-5xl">
