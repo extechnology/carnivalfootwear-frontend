@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 @source "../src";
 /* @import "tw-animate-css"; */
@@ -45,7 +47,7 @@
   --color-stone: var(--stone);
   --color-cream: var(--cream);
 
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-display: "Montserrat", sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
@@ -60,7 +62,7 @@
 
   --foreground: oklch(0.18 0.012 60);       /* deep ink */
   --ink: oklch(0.18 0.012 60);
-  --clay: oklch(0.55 0.085 45);             /* warm terracotta accent */
+  --clay: oklch(47.755% 0.08451 222.257);             /* warm terracotta accent */
 
   --card: oklch(0.99 0.006 80);
   --card-foreground: var(--foreground);
@@ -72,16 +74,16 @@
   --secondary: oklch(0.95 0.012 78);
   --secondary-foreground: var(--foreground);
   --muted: oklch(0.95 0.012 78);
-  --muted-foreground: oklch(0.48 0.012 60);
-  --accent: oklch(0.55 0.085 45);
+  --muted-foreground: oklch(37.022% 0.02335 217.802);
+  --accent: oklch(56.393% 0.09384 205.349);
   --accent-foreground: oklch(0.985 0.008 80);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(0.985 0.008 80);
   --border: oklch(0.88 0.01 75);
   --input: oklch(0.88 0.01 75);
-  --ring: oklch(0.55 0.085 45);
+  --ring: oklch(53.11% 0.09251 220.11);
 
-  --chart-1: oklch(0.55 0.085 45);
+  --chart-1: oklch(50.448% 0.08573 212.203);
   --chart-2: oklch(0.7 0.04 75);
   --chart-3: oklch(0.4 0.03 60);
   --chart-4: oklch(0.85 0.02 80);

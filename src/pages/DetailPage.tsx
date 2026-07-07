@@ -144,7 +144,7 @@ Could you please provide more details?`;
             {/* <p className="eyebrow">
               N° {String(product.id).padStart(2, "0")} · {product.material}
             </p> */}
-            <h1 className="display md:mt-4 mt-2 text-2xl leading-none md:text-4xl">
+            <h1 className="display font-medium md:mt-4 mt-2 text-2xl leading-none md:text-4xl">
               {product.name}
             </h1>
             <p className="md:mt-4 mt-2 italic text-muted-foreground">
@@ -297,7 +297,7 @@ Could you please provide more details?`;
           <div className="mb-12 flex items-end justify-between">
             <div>
               <p className="eyebrow">You may also love</p>
-              <h2 className="display mt-3 text-4xl md:text-5xl">
+              <h2 className="display mt-3 font-medium text-4xl md:text-5xl">
                 From the same season
               </h2>
             </div>

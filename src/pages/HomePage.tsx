@@ -146,7 +146,7 @@ export default function Home() {
                     duration: 1.1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="md:mt-8 mt-4 max-w-3xl text-5xl font-light leading-[0.88] tracking-tight text-white md:text-5xl xl:text-7xl"
+                  className="md:mt-8 mt-4 max-w-3xl text-5xl font-medium leading-[0.88] tracking-tight text-white md:text-5xl xl:text-7xl"
                 >
                   Elegance Starts
                   <br />
@@ -236,13 +236,13 @@ export default function Home() {
             </div> */}
 
             {/* Scroll */}
-            <div className="absolute bottom-10 left-1/2 z-30 hidden -translate-x-1/2 md:flex flex-col items-center gap-3">
+            {/* <div className="absolute bottom-10 left-1/2 z-30 hidden -translate-x-1/2 md:flex flex-col items-center gap-3">
               <span className="text-xs uppercase tracking-[0.35em] text-white/60">
                 Scroll
               </span>
 
               <div className="h-12 w-px bg-white/40" />
-            </div>
+            </div> */}
           </>
         ) : (
           <div className="h-screen animate-pulse bg-neutral-900" />
@@ -254,7 +254,7 @@ export default function Home() {
         <div className="md:mb-16 mb-8 flex flex-col md:gap-8 gap-4 md:flex-row md:items-end md:justify-between">
           <Reveal>
             <p className="eyebrow">Prime Edition — Quiet Comfortable</p>
-            <h2 className="display mt-4 max-w-3xl text-3xl leading-none md:text-5xl">
+            <h2 className="display mt-4 max-w-3xl font-medium text-3xl leading-none md:text-5xl">
               Step into Confidence. Step into{" "}
               <span className="italic text-accent">Beauty</span>.
             </h2>
@@ -300,7 +300,7 @@ export default function Home() {
           <div className="md:col-span-5 md:pt-2 content-center">
             <Reveal>
               <p className="eyebrow">Confidence</p>
-              <h2 className="display mt-3 text-3xl leading-[1.05] md:text-5xl">
+              <h2 className="display mt-3 font-medium text-3xl leading-[1.05] md:text-5xl">
                 Chic Looks Begin at Your Feet, Walk with{" "}
                 <span className="italic text-accent">Confidence</span>.
               </h2>
@@ -336,7 +336,7 @@ export default function Home() {
       {/* CTA */}
       <section className="mx-auto max-w-[1400px] px-6 py-8 text-center md:px-12 md:py-20">
         <Reveal>
-          <h2 className="display mx-auto mt-3 max-w-4xl text-4xl leading-none md:text-7xl">
+          <h2 className="display mx-auto mt-3 max-w-4xl font-medium text-4xl leading-none md:text-6xl">
             Choose <span className="italic text-accent">one pair</span>
             <br />
             you'll wear forever.

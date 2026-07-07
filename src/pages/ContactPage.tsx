@@ -57,7 +57,7 @@ export default function Contact() {
 
         <div className="mt-10 border-b border-border pb-10">
           <Reveal>
-            <h1 className="display mt-6 text-5xl leading-[0.95] md:text-6xl">
+            <h1 className="display mt-6 font-medium text-5xl leading-[0.95] md:text-6xl">
               Write to <span className="italic text-accent">us.</span>
             </h1>
           </Reveal>

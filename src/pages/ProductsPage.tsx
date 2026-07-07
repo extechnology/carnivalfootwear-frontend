@@ -57,7 +57,7 @@ export default function ProductsPage() {
             <p className="eyebrow">
               Spring / Summer · {new Date().getFullYear()}
             </p>
-            <h1 className="display mt-4 text-3xl leading-none md:text-5xl">
+            <h1 className="display mt-4 font-medium text-3xl leading-none md:text-5xl">
               The <span className="italic text-accent">collection</span>
             </h1>
           </Reveal>
