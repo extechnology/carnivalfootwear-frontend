@@ -102,8 +102,8 @@ export function Footer() {
             <Link to="https://www.extechnology.in/">extechnology.in</Link>
           </p>
           <p className="text-xs tracking-[.1] ">
-            <Link to="/privacy-policy">Privacy Policy</Link> ·{" "}
-            <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            <Link to="/privacy-polic">Privacy Policy</Link> ·{" "}
+            <Link to="/terms-and-condition">Terms & Conditions</Link>
           </p>
         </div>
       </div>

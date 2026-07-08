@@ -5,6 +5,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import { Header } from './components/shared/Navbar';
 import { Footer } from './components/shared/Footer';
 import { Loader } from './components/shared/Loader';
+import NotFound from './pages/NotFound';
 import ScrollToTop from './components/shared/ScrollToTop';
 
 const Home = lazy(() => import("./pages/HomePage"));
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />
