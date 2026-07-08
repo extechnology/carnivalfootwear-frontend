@@ -132,12 +132,12 @@ export default function Home() {
               className="relative z-20 flex h-full items-center"
             >
               <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
-                <Breadcrumbs
+                {/* <Breadcrumbs
                   items={[
                     { label: "Carnival Footwear", to: "/" },
                     { label: "Elegant Collection" },
                   ]}
-                />
+                /> */}
 
                 <motion.h1
                   initial={{ opacity: 0, y: 60 }}

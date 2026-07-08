@@ -75,15 +75,15 @@
   --secondary-foreground: var(--foreground);
   --muted: oklch(0.95 0.012 78);
   --muted-foreground: oklch(37.022% 0.02335 217.802);
-  --accent: oklch(56.393% 0.09384 205.349);
+  --accent: oklch(64.886% 0.11644 221.64);
   --accent-foreground: oklch(0.985 0.008 80);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(0.985 0.008 80);
   --border: oklch(0.88 0.01 75);
   --input: oklch(0.88 0.01 75);
-  --ring: oklch(53.11% 0.09251 220.11);
+  --ring: oklch(64.313% 0.11687 222.408);
 
-  --chart-1: oklch(50.448% 0.08573 212.203);
+  --chart-1: oklch(55.764% 0.09833 222.233);
   --chart-2: oklch(0.7 0.04 75);
   --chart-3: oklch(0.4 0.03 60);
   --chart-4: oklch(0.85 0.02 80);
