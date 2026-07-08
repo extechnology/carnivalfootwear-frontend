@@ -1,4 +1,3 @@
-import lifestyle1 from "../assets/lifestyle-1.jpeg";
 
 export interface SectionImage {
   id: number;
@@ -10,7 +9,7 @@ export interface SectionImage {
 export const sectionImage: SectionImage[] = [
   {
     id: 1,
-    image: lifestyle1,
+    image: "/727 X 727 pixel-01.jpg.jpeg",
     alt_text: "Carnival Footwear lifestyle",
     section: "stats",
   },
