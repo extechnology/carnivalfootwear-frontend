@@ -4,25 +4,23 @@ import sandal3 from "../assets/CL 0024, CREAM, 7-12, 499.jpg.jpeg";
 import sandal4 from "../assets/CL 0025, W.ROSE, 7-12, 499.jpg.jpeg";
 import sandal5 from "../assets/CL 0026, BEIGE, 7-12, 499.jpg.jpeg";
 import sandal6 from "../assets/CL 0029, 7-12, BLACK, 599.jpg.jpeg";
-import sandal7 from "../assets/CL 0025, W.ROSE, 7-12, 499.jpg.jpeg";
-import sandal8 from "../assets/CL 0025, W.ROSE, 7-12, 499.jpg.jpeg";
-import sandal9 from "../assets/CL 0021, 7-12, CREAM, 499.jpg.jpeg";
-import sandal10 from "../assets/CL 0027, CREAM, 7-12, 499.jpg.jpeg";
-import sandal11 from "../assets/CL 0029, 7-12, BLACK, 599.jpg.jpeg";
-import sandal12 from "../assets/CL 0029, BROWN, 7-12, 599.jpg (1).jpeg";
-import sandal13 from "../assets/CL 0030, 7-12, BLACK, 399.jpg.jpeg";
-import sandal14 from "../assets/CL 0031, 7-12, BLACK, 399.jpg.jpeg";
-import sandal15 from "../assets/CL 0032, 7-12, BEIGE, 499.jpg.jpeg";
-import sandal16 from "../assets/CL 0032, CREAM, 7-12, 499.jpg.jpeg";
-import sandal17 from "../assets/CL 0033, 7-12, BLACK, 499.jpg.jpeg";
-import sandal18 from "../assets/CL 0033, BROWN, 7-12, 499.jpg.jpeg";
-import sandal19 from "../assets/CL 2001, BEIGE, 6-11, 599.jpg.jpeg";
-import sandal20 from "../assets/CL 2001, CREAM, 7-12, 499.jpg.jpeg";
-import sandal21 from "../assets/CL 2002, CREAM, 6-11, 599.jpg.jpeg";
-import sandal22 from "../assets/CL 2003, 7-12, 599.jpg.jpeg";
-import sandal23 from "../assets/CL 2003. W.ROPSE, 6-11, 599.jpg.jpeg";
-import sandal24 from "../assets/CL 2005, 7-12, BEIGE, 599.jpg.jpeg";
-import sandal25 from "../assets/CL 2005, PEACH, 6-11, 599.jpg.jpeg";
+import sandal7 from "../assets/CL 0021, 7-12, CREAM, 499.jpg.jpeg";
+import sandal8 from "../assets/CL 0027, CREAM, 7-12, 499.jpg.jpeg";
+import sandal9 from "../assets/CL 0029, 7-12, BLACK, 599.jpg.jpeg";
+import sandal10 from "../assets/CL 0029, BROWN, 7-12, 599.jpg (1).jpeg";
+import sandal11 from "../assets/CL 0030, 7-12, BLACK, 399.jpg.jpeg";
+import sandal12 from "../assets/CL 0031, 7-12, BLACK, 399.jpg.jpeg";
+import sandal13 from "../assets/CL 0032, 7-12, BEIGE, 499.jpg.jpeg";
+import sandal14 from "../assets/CL 0032, CREAM, 7-12, 499.jpg.jpeg";
+import sandal15 from "../assets/CL 0033, 7-12, BLACK, 499.jpg.jpeg";
+import sandal16 from "../assets/CL 0033, BROWN, 7-12, 499.jpg.jpeg";
+import sandal17 from "../assets/CL 2001, BEIGE, 6-11, 599.jpg.jpeg";
+import sandal18 from "../assets/CL 2001, CREAM, 7-12, 499.jpg.jpeg";
+import sandal19 from "../assets/CL 2002, CREAM, 6-11, 599.jpg.jpeg";
+import sandal20 from "../assets/CL 2003, 7-12, 599.jpg.jpeg";
+import sandal21 from "../assets/CL 2003. W.ROPSE, 6-11, 599.jpg.jpeg";
+import sandal22 from "../assets/CL 2005, 7-12, BEIGE, 599.jpg.jpeg";
+import sandal23 from "../assets/CL 2005, PEACH, 6-11, 599.jpg.jpeg";
 
 
 import type { ProductColor } from "./colors";
@@ -53,77 +51,9 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: 25,
-    name: "Carnival 1649",
-    category: { id: 1, name: "Ladies" },
-    product_type: { id: 1, name: "Sandals" },
-    price: "329.00",
-    description:
-      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
-    is_featured: true,
-    material: "PU",
-    colors: [
-      {
-        id: 8,
-        name: "GAJARI",
-        color_code: "#E5679B",
-        sizes: [
-          { id: 1, name: "5" },
-          { id: 2, name: "6" },
-          { id: 3, name: "7" },
-          { id: 4, name: "8" },
-          { id: 5, name: "9" },
-        ],
-        images: [
-          {
-            id: 9,
-            image: sandal25,
-            alt_text: null,
-          },
-        ],
-      },
-    ],
-    created_at: "2026-06-27T08:00:14.413892Z",
-    updated_at: "2026-06-27T08:00:14.413907Z",
-  },
-  {
-    id: 24,
-    name: "Carnival 1649",
-    category: { id: 1, name: "Ladies" },
-    product_type: { id: 1, name: "Sandals" },
-    price: "329.00",
-    description:
-      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
-    is_featured: true,
-    material: "PU",
-    colors: [
-      {
-        id: 8,
-        name: "GAJARI",
-        color_code: "#E5679B",
-        sizes: [
-          { id: 1, name: "5" },
-          { id: 2, name: "6" },
-          { id: 3, name: "7" },
-          { id: 4, name: "8" },
-          { id: 5, name: "9" },
-        ],
-        images: [
-          {
-            id: 9,
-            image: sandal24,
-            alt_text: null,
-          },
-        ],
-      },
-    ],
-    created_at: "2026-06-27T08:00:14.413892Z",
-    updated_at: "2026-06-27T08:00:14.413907Z",
-  },
-  {
     id: 23,
-    name: "Carnival 1649",
-    category: { id: 1, name: "Ladies" },
+    name: "CL 2010",
+    category: { id: 1, name: "Girls" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
     description:
@@ -133,7 +63,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "PEACH",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -156,8 +86,8 @@ export const products: Product[] = [
   },
   {
     id: 22,
-    name: "Carnival 1649",
-    category: { id: 1, name: "Ladies" },
+    name: "CL 2009",
+    category: { id: 1, name: "Girls" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
     description:
@@ -167,7 +97,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "BEIGE",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -190,7 +120,7 @@ export const products: Product[] = [
   },
   {
     id: 21,
-    name: "Carnival 1649",
+    name: "CL 2008",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -201,7 +131,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "W.ROSE",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -224,7 +154,7 @@ export const products: Product[] = [
   },
   {
     id: 20,
-    name: "Carnival 1649",
+    name: "CL 2007",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -235,7 +165,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "BLACK",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -258,7 +188,7 @@ export const products: Product[] = [
   },
   {
     id: 19,
-    name: "Carnival 1649",
+    name: "CL 2006",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -269,7 +199,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "CREAM",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -292,7 +222,7 @@ export const products: Product[] = [
   },
   {
     id: 18,
-    name: "Carnival 1649",
+    name: "CL 2005",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -303,7 +233,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "CREAM",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -326,7 +256,7 @@ export const products: Product[] = [
   },
   {
     id: 17,
-    name: "Carnival 1649",
+    name: "CL 2004",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -337,7 +267,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "BEIGE",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -359,10 +289,9 @@ export const products: Product[] = [
     updated_at: "2026-06-27T08:00:14.413907Z",
   },
 
-
   {
     id: 16,
-    name: "Carnival 1704",
+    name: "CL 2003",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "359.00",
@@ -373,7 +302,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 17,
-        name: "BLACK",
+        name: "BROWN",
         color_code: "#000000",
         sizes: [
           { id: 1, name: "5" },
@@ -385,26 +314,7 @@ export const products: Product[] = [
         images: [
           {
             id: 19,
-            image: sandal1,
-            alt_text: null,
-          },
-        ],
-      },
-      {
-        id: 17,
-        name: "CHIKU",
-        color_code: "#826855",
-        sizes: [
-          { id: 1, name: "5" },
-          { id: 2, name: "6" },
-          { id: 3, name: "7" },
-          { id: 4, name: "8" },
-          { id: 5, name: "9" },
-        ],
-        images: [
-          {
-            id: 19,
-            image: sandal2,
+            image: sandal16,
             alt_text: null,
           },
         ],
@@ -415,7 +325,7 @@ export const products: Product[] = [
   },
   {
     id: 15,
-    name: "Carnival 1701",
+    name: "CL 2002",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "419.00",
@@ -426,7 +336,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 16,
-        name: "CREAM",
+        name: "BLACK",
         color_code: "#722F37",
         sizes: [
           { id: 1, name: "5" },
@@ -438,7 +348,7 @@ export const products: Product[] = [
         images: [
           {
             id: 18,
-            image: sandal3,
+            image: sandal15,
             alt_text: null,
           },
         ],
@@ -449,7 +359,7 @@ export const products: Product[] = [
   },
   {
     id: 14,
-    name: "Carnival",
+    name: "CL 2001",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "399.00",
@@ -460,7 +370,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 15,
-        name: "W.ROSE",
+        name: "CREAM",
         color_code: "#000000",
         sizes: [
           { id: 1, name: "5" },
@@ -472,45 +382,7 @@ export const products: Product[] = [
         images: [
           {
             id: 17,
-            image: sandal4,
-            alt_text: null,
-          },
-        ],
-      },
-      {
-        id: 15,
-        name: "W.ROSE",
-        color_code: "#000000",
-        sizes: [
-          { id: 1, name: "5" },
-          { id: 2, name: "6" },
-          { id: 3, name: "7" },
-          { id: 4, name: "8" },
-          { id: 5, name: "9" },
-        ],
-        images: [
-          {
-            id: 17,
-            image: sandal7,
-            alt_text: null,
-          },
-        ],
-      },
-      {
-        id: 15,
-        name: "W.ROSE",
-        color_code: "#000000",
-        sizes: [
-          { id: 1, name: "5" },
-          { id: 2, name: "6" },
-          { id: 3, name: "7" },
-          { id: 4, name: "8" },
-          { id: 5, name: "9" },
-        ],
-        images: [
-          {
-            id: 17,
-            image: sandal8,
+            image: sandal14,
             alt_text: null,
           },
         ],
@@ -521,8 +393,8 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    name: "Carnival 1699",
-    category: { id: 4, name: "Kids" },
+    name: "CL 0033",
+    category: { id: 4, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "314.00",
     description:
@@ -532,7 +404,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 14,
-        name: "BLACK",
+        name: "BEIGE",
         color_code: "#000000",
         sizes: [
           { id: 10, name: "1" },
@@ -543,7 +415,7 @@ export const products: Product[] = [
         images: [
           {
             id: 16,
-            image: sandal4,
+            image: sandal13,
             alt_text: null,
           },
         ],
@@ -554,7 +426,7 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    name: "Carnival 1699",
+    name: "CL 0032",
     category: { id: 2, name: "Girls" },
     product_type: { id: 1, name: "Sandals" },
     price: "314.00",
@@ -576,7 +448,7 @@ export const products: Product[] = [
         images: [
           {
             id: 15,
-            image: sandal5,
+            image: sandal12,
             alt_text: null,
           },
         ],
@@ -587,8 +459,8 @@ export const products: Product[] = [
   },
   {
     id: 11,
-    name: "Carnival 1697",
-    category: { id: 1, name: "Ladies" },
+    name: "CL 0031",
+    category: { id: 1, name: "Girls" },
     product_type: { id: 4, name: "Slippers" },
     price: "324.00",
     description:
@@ -598,7 +470,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 12,
-        name: "FOREST GREEN",
+        name: "BLACK",
         color_code: "#228B22",
         sizes: [
           { id: 1, name: "5" },
@@ -610,7 +482,7 @@ export const products: Product[] = [
         images: [
           {
             id: 14,
-            image: sandal6,
+            image: sandal11,
             alt_text: null,
           },
         ],
@@ -621,7 +493,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    name: "Carnival 1688",
+    name: "CL 0030",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "399.00",
@@ -644,7 +516,7 @@ export const products: Product[] = [
         images: [
           {
             id: 13,
-            image: sandal7,
+            image: sandal10,
             alt_text: null,
           },
         ],
@@ -655,7 +527,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: "Carnival 1687",
+    name: "CL 0029",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "389.00",
@@ -666,7 +538,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 10,
-        name: "GREY",
+        name: "BLACK",
         color_code: "#808080",
         sizes: [
           { id: 1, name: "5" },
@@ -678,7 +550,7 @@ export const products: Product[] = [
         images: [
           {
             id: 12,
-            image: sandal8,
+            image: sandal9,
             alt_text: null,
           },
         ],
@@ -689,7 +561,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: "Carnival 1680",
+    name: "CL 0028",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 4, name: "Slippers" },
     price: "399.00",
@@ -700,7 +572,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 9,
-        name: "WOOD ROSE",
+        name: "CREAM",
         color_code: "#AF8E90",
         sizes: [
           { id: 1, name: "5" },
@@ -712,7 +584,7 @@ export const products: Product[] = [
         images: [
           {
             id: 10,
-            image: sandal9,
+            image: sandal8,
             alt_text: "WOODROSE",
           },
         ],
@@ -723,7 +595,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: "Carnival 1649",
+    name: "CL 0027",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -734,7 +606,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "CREAM",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -746,7 +618,7 @@ export const products: Product[] = [
         images: [
           {
             id: 9,
-            image: sandal10,
+            image: sandal7,
             alt_text: null,
           },
         ],
@@ -757,7 +629,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: "Carnival 1649",
+    name: "CL 0026",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -768,7 +640,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "BLACK",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -780,7 +652,7 @@ export const products: Product[] = [
         images: [
           {
             id: 9,
-            image: sandal11,
+            image: sandal6,
             alt_text: null,
           },
         ],
@@ -791,7 +663,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "Carnival 1649",
+    name: "CL 0025",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -802,7 +674,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "BEIGE",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -814,7 +686,7 @@ export const products: Product[] = [
         images: [
           {
             id: 9,
-            image: sandal12,
+            image: sandal5,
             alt_text: null,
           },
         ],
@@ -825,7 +697,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "Carnival 1649",
+    name: "CL 0024",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -836,7 +708,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "W.ROSE",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -848,7 +720,7 @@ export const products: Product[] = [
         images: [
           {
             id: 9,
-            image: sandal13,
+            image: sandal4,
             alt_text: null,
           },
         ],
@@ -859,7 +731,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "Carnival 1649",
+    name: "CL 0023",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -870,7 +742,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "CREAM",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -882,7 +754,7 @@ export const products: Product[] = [
         images: [
           {
             id: 9,
-            image: sandal14,
+            image: sandal3,
             alt_text: null,
           },
         ],
@@ -893,7 +765,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Carnival 1649",
+    name: "CL 0022",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -904,7 +776,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "CHIKU",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -916,7 +788,7 @@ export const products: Product[] = [
         images: [
           {
             id: 9,
-            image: sandal15,
+            image: sandal2,
             alt_text: null,
           },
         ],
@@ -927,7 +799,7 @@ export const products: Product[] = [
   },
   {
     id: 1,
-    name: "Carnival 1649",
+    name: "CL 0021",
     category: { id: 1, name: "Ladies" },
     product_type: { id: 1, name: "Sandals" },
     price: "329.00",
@@ -938,7 +810,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 8,
-        name: "GAJARI",
+        name: "BLACK",
         color_code: "#E5679B",
         sizes: [
           { id: 1, name: "5" },
@@ -950,7 +822,7 @@ export const products: Product[] = [
         images: [
           {
             id: 9,
-            image: sandal16,
+            image: sandal1,
             alt_text: null,
           },
         ],
