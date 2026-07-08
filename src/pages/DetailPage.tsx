@@ -147,7 +147,7 @@ Could you please provide more details?`;
             <h1 className="display font-medium md:mt-4 mt-2 text-2xl leading-none md:text-4xl">
               {product.name}
             </h1>
-            <p className="md:mt-4 mt-2 italic text-muted-foreground">
+            <p className="md:mt-4 mt-2  text-muted-foreground">
               {product.description?.split("\n")[0]}
             </p>
             <p className="md:mt-8 mt-2 text-2xl tabular-nums">

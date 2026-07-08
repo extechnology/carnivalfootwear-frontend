@@ -22,7 +22,7 @@ export default function Home() {
   const { heroImage } = useHeroImage();
   const { sectionImage } = useSectionImage();
 
-  console.log(heroImage,"heroimage")
+  console.log(heroImage, "heroimage");
 
   // FIX: Derive safely — never undefined at render time
   const sectionImg = sectionImage?.[0]?.image ?? null;
@@ -148,10 +148,9 @@ export default function Home() {
                   }}
                   className="md:mt-8 mt-4 max-w-3xl text-5xl font-medium leading-[0.88] tracking-tight text-white md:text-5xl xl:text-7xl"
                 >
-                  Elegance Starts
-                  <br />
+                  Every Step Deserves the Best. <br />
                   <span className=" font-normal text-white/90">
-                    From The Ground Up.
+                    Discover Footwear That Fits Your Life.
                   </span>
                 </motion.h1>
 
@@ -164,9 +163,8 @@ export default function Home() {
                   }}
                   className="md:mt-8 mt-4 max-w-xl text-xs md:text-lg md:leading-8 text-white/75"
                 >
-                  Stylish, comfortable and crafted for every occasion. Discover
-                  ladies' footwear designed to add elegance and confidence to
-                  every step.
+                  Step into comfort, style, and confidence with premium footwear
+                  designed to fit your lifestyle.
                 </motion.p>
 
                 <motion.div
@@ -255,8 +253,8 @@ export default function Home() {
           <Reveal>
             <p className="eyebrow">Prime Edition — Quiet Comfortable</p>
             <h2 className="display mt-4 max-w-3xl font-medium text-3xl leading-none md:text-5xl">
-              Step into Confidence. Step into{" "}
-              <span className="italic text-accent">Beauty</span>.
+              Walk Into Every Moment with .{" "}
+              <span className=" text-accent">Confidence</span>.
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
@@ -301,15 +299,15 @@ export default function Home() {
             <Reveal>
               <p className="eyebrow">Confidence</p>
               <h2 className="display mt-3 font-medium text-3xl leading-[1.05] md:text-5xl">
-                Chic Looks Begin at Your Feet, Walk with{" "}
-                <span className="italic text-accent">Confidence</span>.
+                An Uncompromising Standard of <br />
+                <span className=" text-accent">Comfort and Style.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Your style begins with the perfect pair. Step into footwear that
-                blends elegance, comfort, and confidence, empowering you to walk
-                beautifully wherever life takes you.
+                Experience the perfect blend of comfort and style with premium
+                footwear designed for everyday confidence. Every step feels
+                effortless and looks exceptional.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
@@ -337,9 +335,9 @@ export default function Home() {
       <section className="mx-auto max-w-[1400px] px-6 py-8 text-center md:px-12 md:py-20">
         <Reveal>
           <h2 className="display mx-auto mt-3 max-w-4xl font-medium text-4xl leading-none md:text-6xl">
-            Choose <span className="italic text-accent">one pair</span>
+            Your Forever <span className=" text-accent">Favourite</span>
             <br />
-            you'll wear forever.
+            Starts Here
           </h2>
         </Reveal>
         <Reveal delay={0.15}>

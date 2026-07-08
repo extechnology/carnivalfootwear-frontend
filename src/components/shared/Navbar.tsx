@@ -46,7 +46,7 @@ export function Header() {
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-10 text-[13px] uppercase tracking-[0.2em] md:flex">
           {navLinks.map((link) => (
-            <Link key={link.title} to={link.href} className="link-underline">
+            <Link key={link.title} to={link.href} className="link-underline font-medium text-gray-700">
               {link.title}
             </Link>
           ))}
@@ -93,7 +93,7 @@ export function Header() {
                 >
                   <Link 
                     to={link.href} 
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary font-medium transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.title}
