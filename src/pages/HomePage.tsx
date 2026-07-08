@@ -146,7 +146,7 @@ export default function Home() {
                     duration: 1.1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="md:mt-8 mt-4 max-w-3xl text-5xl font-medium leading-[0.88] tracking-tight text-white md:text-5xl xl:text-7xl"
+                  className="md:mt-8 mt-4 max-w-3xl text-5xl font-medium leading-[0.99] tracking-tight text-white md:text-5xl xl:text-7xl"
                 >
                   Every Step Deserves the Best. <br />
                   <span className=" font-normal text-white/90">
