@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import type { Product } from "../../features/product/types/types.product";
 
