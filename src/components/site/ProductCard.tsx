@@ -24,7 +24,7 @@ export function ProductCard({
       }}
       className="group"
     >
-      <Link to={`/product/${product.id}`} className="block">
+      <div className="block">
         <div className="relative aspect-4/5 overflow-hidden rounded-md  bg-linear-to-br from-[#8A6136] via-[#E5C79A] to-[#F8EBD4]">
           {" "}
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(82,56,28,0.35)_0%,transparent_35%)]" />
@@ -61,13 +61,15 @@ export function ProductCard({
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             />
           )}
-          <div className="absolute inset-x-0 bottom-0 translate-y-full bg-ink/90 px-5 py-3 text-center text-[11px] uppercase tracking-[0.25em] text-cream transition-transform duration-500 group-hover:translate-y-0">
+          {/* <div className="absolute inset-x-0 bottom-0 translate-y-full bg-ink/90 px-5 py-3 text-center text-[11px] uppercase tracking-[0.25em] text-cream transition-transform duration-500 group-hover:translate-y-0">
             View Color Options →
-          </div>
+          </div> */}
         </div>
         <div className="mt-5 flex items-baseline justify-between gap-4">
           <div>
-            <h3 className="md:display md:text-lg text-xs leading-tight">{product.name}</h3>
+            <h3 className="md:display md:text-lg text-xs leading-tight">
+              {product.name}
+            </h3>
             <p className="mt-1 text-xs md:text-sm md:uppercase tracking-[0.2em] text-muted-foreground">
               {colorName} · {product.category?.name}
             </p>
@@ -76,7 +78,7 @@ export function ProductCard({
             ₹{parseFloat(product.price).toLocaleString("en-IN")}
           </p>
         </div>
-      </Link>
+      </div>
     </motion.article>
   );
 }
