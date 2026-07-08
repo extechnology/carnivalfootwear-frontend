@@ -79,7 +79,7 @@ export default function Contact() {
                 title="Cyber Lady"
                 lines={[
                   "Unique Footcare",
-                  "20/341,Perumukham",
+                  "20/341,Perumugham",
                   "Vadakke Bazar, Ramanattukara",
                   "Kozhikode , Kerala , 673631",
                 ]}
