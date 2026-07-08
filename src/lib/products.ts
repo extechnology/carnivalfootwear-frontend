@@ -1,11 +1,31 @@
-import sandal1 from "../assets/sandal-1.jpeg";
-import sandal2 from "../assets/sandal-2.jpeg";
-import sandal3 from "../assets/sandal-3.jpeg";
-import sandal4 from "../assets/sandal-4.jpeg";
-import sandal5 from "../assets/sandal-5.jpeg";
-import sandal6 from "../assets/sandal-6.jpeg";
-import type { ProductColor } from "./colors";
+import sandal1 from "../assets/CL 0023, 7-12, BLACK, 449.jpg.jpeg";
+import sandal2 from "../assets/CL 0023, CHIKU, 7-12, 449.jpg.jpeg";
+import sandal3 from "../assets/CL 0024, CREAM, 7-12, 499.jpg.jpeg";
+import sandal4 from "../assets/CL 0025, W.ROSE, 7-12, 499.jpg.jpeg";
+import sandal5 from "../assets/CL 0026, BEIGE, 7-12, 499.jpg.jpeg";
+import sandal6 from "../assets/CL 0029, 7-12, BLACK, 599.jpg.jpeg";
+import sandal7 from "../assets/CL 0025, W.ROSE, 7-12, 499.jpg.jpeg";
+import sandal8 from "../assets/CL 0025, W.ROSE, 7-12, 499.jpg.jpeg";
+import sandal9 from "../assets/CL 0021, 7-12, CREAM, 499.jpg.jpeg";
+import sandal10 from "../assets/CL 0027, CREAM, 7-12, 499.jpg.jpeg";
+import sandal11 from "../assets/CL 0029, 7-12, BLACK, 599.jpg.jpeg";
+import sandal12 from "../assets/CL 0029, BROWN, 7-12, 599.jpg (1).jpeg";
+import sandal13 from "../assets/CL 0030, 7-12, BLACK, 399.jpg.jpeg";
+import sandal14 from "../assets/CL 0031, 7-12, BLACK, 399.jpg.jpeg";
+import sandal15 from "../assets/CL 0032, 7-12, BEIGE, 499.jpg.jpeg";
+import sandal16 from "../assets/CL 0032, CREAM, 7-12, 499.jpg.jpeg";
+import sandal17 from "../assets/CL 0033, 7-12, BLACK, 499.jpg.jpeg";
+import sandal18 from "../assets/CL 0033, BROWN, 7-12, 499.jpg.jpeg";
+import sandal19 from "../assets/CL 2001, BEIGE, 6-11, 599.jpg.jpeg";
+import sandal20 from "../assets/CL 2001, CREAM, 7-12, 499.jpg.jpeg";
+import sandal21 from "../assets/CL 2002, CREAM, 6-11, 599.jpg.jpeg";
+import sandal22 from "../assets/CL 2003, 7-12, 599.jpg.jpeg";
+import sandal23 from "../assets/CL 2003. W.ROPSE, 6-11, 599.jpg.jpeg";
+import sandal24 from "../assets/CL 2005, 7-12, BEIGE, 599.jpg.jpeg";
+import sandal25 from "../assets/CL 2005, PEACH, 6-11, 599.jpg.jpeg";
 
+
+import type { ProductColor } from "./colors";
 
 interface Category {
   id: number;
@@ -33,6 +53,314 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    id: 25,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal25,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 24,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal24,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 23,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal23,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 22,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal22,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 21,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal21,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 20,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal20,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 19,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal19,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 18,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal18,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 17,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal17,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+
+
+  {
     id: 16,
     name: "Carnival 1704",
     category: { id: 1, name: "Ladies" },
@@ -45,8 +373,8 @@ export const products: Product[] = [
     colors: [
       {
         id: 17,
-        name: "GAJARI",
-        color_code: "#826855",
+        name: "BLACK",
+        color_code: "#000000",
         sizes: [
           { id: 1, name: "5" },
           { id: 2, name: "6" },
@@ -58,6 +386,25 @@ export const products: Product[] = [
           {
             id: 19,
             image: sandal1,
+            alt_text: null,
+          },
+        ],
+      },
+      {
+        id: 17,
+        name: "CHIKU",
+        color_code: "#826855",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 19,
+            image: sandal2,
             alt_text: null,
           },
         ],
@@ -79,7 +426,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 16,
-        name: "GAJARI",
+        name: "CREAM",
         color_code: "#722F37",
         sizes: [
           { id: 1, name: "5" },
@@ -91,7 +438,7 @@ export const products: Product[] = [
         images: [
           {
             id: 18,
-            image:sandal2,
+            image: sandal3,
             alt_text: null,
           },
         ],
@@ -113,7 +460,7 @@ export const products: Product[] = [
     colors: [
       {
         id: 15,
-        name: "BLACK",
+        name: "W.ROSE",
         color_code: "#000000",
         sizes: [
           { id: 1, name: "5" },
@@ -125,7 +472,45 @@ export const products: Product[] = [
         images: [
           {
             id: 17,
-            image:sandal3,
+            image: sandal4,
+            alt_text: null,
+          },
+        ],
+      },
+      {
+        id: 15,
+        name: "W.ROSE",
+        color_code: "#000000",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 17,
+            image: sandal7,
+            alt_text: null,
+          },
+        ],
+      },
+      {
+        id: 15,
+        name: "W.ROSE",
+        color_code: "#000000",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 17,
+            image: sandal8,
             alt_text: null,
           },
         ],
@@ -158,7 +543,7 @@ export const products: Product[] = [
         images: [
           {
             id: 16,
-            image:sandal4,
+            image: sandal4,
             alt_text: null,
           },
         ],
@@ -191,7 +576,7 @@ export const products: Product[] = [
         images: [
           {
             id: 15,
-            image:sandal5,
+            image: sandal5,
             alt_text: null,
           },
         ],
@@ -225,7 +610,7 @@ export const products: Product[] = [
         images: [
           {
             id: 14,
-            image:sandal6,
+            image: sandal6,
             alt_text: null,
           },
         ],
@@ -259,8 +644,7 @@ export const products: Product[] = [
         images: [
           {
             id: 13,
-            image:
-              sandal1,
+            image: sandal7,
             alt_text: null,
           },
         ],
@@ -294,8 +678,7 @@ export const products: Product[] = [
         images: [
           {
             id: 12,
-            image:
-              sandal2,
+            image: sandal8,
             alt_text: null,
           },
         ],
@@ -329,8 +712,7 @@ export const products: Product[] = [
         images: [
           {
             id: 10,
-            image:
-              sandal2,
+            image: sandal9,
             alt_text: "WOODROSE",
           },
         ],
@@ -364,7 +746,211 @@ export const products: Product[] = [
         images: [
           {
             id: 9,
-            image:sandal4,
+            image: sandal10,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 6,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal11,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 5,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal12,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 4,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal13,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 3,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal14,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 2,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal15,
+            alt_text: null,
+          },
+        ],
+      },
+    ],
+    created_at: "2026-06-27T08:00:14.413892Z",
+    updated_at: "2026-06-27T08:00:14.413907Z",
+  },
+  {
+    id: 1,
+    name: "Carnival 1649",
+    category: { id: 1, name: "Ladies" },
+    product_type: { id: 1, name: "Sandals" },
+    price: "329.00",
+    description:
+      "Design \r\nElegantly crafted with sleek metallic-accented straps and a sparkling buckle, this contemporary sandal blends minimalist style with feminine charm, making it the perfect choice for casual outings and everyday fashion.\r\n\r\nQuality\r\nMade with premium-quality materials, this sandal features a soft cushioned footbed, durable lightweight sole, and superior craftsmanship, ensuring lasting comfort, stability, and reliable everyday performance.",
+    is_featured: true,
+    material: "PU",
+    colors: [
+      {
+        id: 8,
+        name: "GAJARI",
+        color_code: "#E5679B",
+        sizes: [
+          { id: 1, name: "5" },
+          { id: 2, name: "6" },
+          { id: 3, name: "7" },
+          { id: 4, name: "8" },
+          { id: 5, name: "9" },
+        ],
+        images: [
+          {
+            id: 9,
+            image: sandal16,
             alt_text: null,
           },
         ],
