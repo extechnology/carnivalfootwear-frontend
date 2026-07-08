@@ -73,7 +73,7 @@ export default function Contact() {
       <section className="mx-auto grid max-w-[1400px] grid-cols-1 gap-16 px-6 py-20 md:grid-cols-12 md:px-12 md:py-28">
         <div className="md:col-span-5">
           <Reveal>
-            <p className="eyebrow">House</p>
+            <p className="eyebrow">Address</p>
             <div className="mt-6 space-y-8 text-sm leading-relaxed">
               <Block
                 title="Carnival Footwear"
@@ -93,7 +93,7 @@ export default function Contact() {
                 ]}
               /> */}
               <Block
-                title="Direct"
+                title="Contact"
                 lines={["uninquefootcarefrk@gmail.com", "+91 98474 18554"]}
               />
 
