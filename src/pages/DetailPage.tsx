@@ -94,7 +94,7 @@ Could you please provide more details?`;
       <section className="mx-auto max-w-[1400px] px-6 pt-4 md:px-12 md:pt-14">
         <Breadcrumbs
           items={[
-            { label: "Cyber Lady", to: "/" },
+            { label: "Carnival Footwear", to: "/" },
             { label: "Shop", to: "/products" },
             { label: product.category?.name || "Category" },
             { label: product.name },

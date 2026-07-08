@@ -52,7 +52,7 @@ export default function Contact() {
     <>
       <section className="mx-auto max-w-[1400px] px-6 pt-12 md:px-12 md:pt-16">
         <Breadcrumbs
-          items={[{ label: "Cyber Lady", to: "/" }, { label: "Contact" }]}
+          items={[{ label: "Carnival Footwear", to: "/" }, { label: "Contact" }]}
         />
 
         <div className="mt-10 border-b border-border pb-10">
@@ -76,7 +76,7 @@ export default function Contact() {
             <p className="eyebrow">House</p>
             <div className="mt-6 space-y-8 text-sm leading-relaxed">
               <Block
-                title="Cyber Lady"
+                title="Carnival Footwear"
                 lines={[
                   "Unique Footcare",
                   "20/341,Perumugham",

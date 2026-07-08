@@ -49,7 +49,7 @@ export default function ProductsPage() {
     <>
       <section className="mx-auto max-w-[1400px] px-6 pt-12 md:px-12 md:pt-16">
         <Breadcrumbs
-          items={[{ label: "Cyber Lady", to: "/" }, { label: "Shop" }]}
+          items={[{ label: "Carnival Footwear", to: "/" }, { label: "Shop" }]}
         />
 
         <div className="mt-10 flex flex-col gap-6 border-b border-border pb-10 md:flex-row md:items-end md:justify-between">
