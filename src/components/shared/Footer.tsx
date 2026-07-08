@@ -11,7 +11,7 @@ export function Footer() {
               <img
                 src="/logo/logo1.png"
                 className="h-16 w-auto"
-                alt="Cyber Lady Logo"
+                alt="Carnival Logo"
               />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">

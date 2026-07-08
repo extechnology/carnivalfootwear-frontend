@@ -17,7 +17,7 @@ const Editorial = () => {
               {sectionImg && (
                 <motion.img
                   src={sectionImg}
-                  alt="Woman walking in Cyber Lady nude strap sandals on marble"
+                  alt="Woman walking in Carnival Footwear nude strap sandals on marble"
                   loading="lazy"
                   className="w-160 aspect-square object-cover"
                   initial={{ scale: 1.1 }}
